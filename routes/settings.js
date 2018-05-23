@@ -9,7 +9,9 @@ router.get('/', function(req, res, next ){
 });
 
 router.get('/brands', function(req, res, next) {
-    res.render('brands/view-brands',{ title : "List All brands" });
+    const MongoClient = require('mongodb').MongoClient;
+    const assert = require('assert');
+    res.render('brands/view-brands',{ title: "test"});
 });
 
 router.get('/brands/new/:id', function(req, res, next) {
