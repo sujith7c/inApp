@@ -16,10 +16,30 @@
   background-repeat:no-repeat;
 }
 
+
 #front-head-nav {
+  background-color:rgb(48,47,62);
+}
+
+.navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link {
 }
 
 #navcol-1 {
   color:rgb(239,238,238);
-  background-color:rgba(235,242,245);;
+  background-color:color:rgb(235,242,245);
+}
+
+#navcol-1 ul {
+  height:40px;
+}
+
+#front-head-nav {
+  background-color:rgb(224,223,231);
+}
+
+#front-nav-item .nav-item {
+  color:rgb(232,234,235);
+}
+
+.nav.navbar-nav.ml-auto {
 }
