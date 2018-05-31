@@ -8,6 +8,7 @@ var logger = require('morgan');
 
 
 var configRouter = require('./routes/settings');
+var userRouter = require('./routes/user.js');
 
 var app = express();
 //handlebars.create({'defaultLayout': "main"});
@@ -24,15 +25,17 @@ app.use(express.static(__dirname + '/public'));
 
 
 app.get('/', function(req, res) {
-	res.render('index', {title:"Test page"});
+	res.render('index', {title:"InApp:Home"});
 });
 
+//define all mount here
 app.use('/configuration', configRouter);
+app.use('/user', userRouter);
 
 app.use(function(req, res) {
 	res.type('text/plain');
 	res.status(404);
-	res.send('Not Found!!')
+	res.send('Not Found!!');
 });
 
 app.use(function(err, req, res, next){
