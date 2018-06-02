@@ -67,3 +67,15 @@
   background-color:rgb(224,223,231);
 }
 
+#head-nav {
+  background-color:rgb(224,223,231);
+}
+
+.notfound {
+  font-family:Montserrat, sans-serif;
+}
+
+.text-center.error-message p {
+  font-family:Montserrat, sans-serif;
+  font-size:29px;
+}

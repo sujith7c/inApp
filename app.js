@@ -33,9 +33,8 @@ app.use('/configuration', configRouter);
 app.use('/user', userRouter);
 
 app.use(function(req, res) {
-	res.type('text/plain');
-	res.status(404);
-	res.send('Not Found!!');
+	//res.status(404);
+	res.render('view-404',{title:'NotFound'});
 });
 
 app.use(function(err, req, res, next){
