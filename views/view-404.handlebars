@@ -6,6 +6,9 @@
 </nav>
 <div class="errorWindow">
     <h2 class="text-center errorHead">Oops!</h2>
+    <h2 class="text-center errorHead">{{message}}</h2>    
     <p class="text-center errorDetails">The Requested page can not be found !</p>
+    <p class="text-center errorDetails">{{error.status}}</p>    
+    <p class="text-center errorDetails">{{error.stack}}</p>      
     <div class="errAct"></div>
 </div>

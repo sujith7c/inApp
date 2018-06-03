@@ -5,7 +5,7 @@ var hbs = require("express-handlebars");
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
+var createError = require('http-errors');
 
 var configRouter = require('./routes/settings');
 var userRouter = require('./routes/user.js');
@@ -20,7 +20,9 @@ app.engine('handlebars',hbs(
 ));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'handlebars');
-app.use(express.static(__dirname + '/public'));
+//app.use(express.static(__dirname + '/public'));
+app.use(express.static(path.join(__dirname, 'public')));
+
 
 
 
@@ -32,7 +34,7 @@ app.get('/', function(req, res) {
 app.use('/configuration', configRouter);
 app.use('/user', userRouter);
 
-app.use(function(req, res) {
+/*app.use(function(req, res, next) {
 	//res.status(404);
 	res.render('view-404',{title:'NotFound'});
 });
@@ -44,6 +46,24 @@ app.use(function(err, req, res, next){
 	res.send('Server Error');
 
 });
+*/
+// catch 404 and forward to error handler
+app.use(function(req, res, next) {
+	next(createError(404));
+  });
+
+  
+// error handler
+app.use(function(err, req, res, next) {
+	// set locals, only providing error in development
+	res.locals.message = err.message;
+	res.locals.error = req.app.get('env') === 'development' ? err : {};
+  
+	// render the error page
+	res.status(err.status || 500);
+	res.render('view-404');
+  });
+  
 
 app.listen(app.get('port'),function() {
 	console.log('Listening on port '+ app.get('port') + " Press Ctrl + C to terminate");
