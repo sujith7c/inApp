@@ -65,8 +65,8 @@ app.use(function(err, req, res, next) {
   });
   
 
-app.listen(app.get('port'),function() {
+/*app.listen(app.get('port'),function() {
 	console.log('Listening on port '+ app.get('port') + " Press Ctrl + C to terminate");
 });
-
+*/
 module.exports = app;
