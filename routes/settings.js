@@ -11,7 +11,12 @@ router.get('/', function(req, res, next ){
 router.get('/brands', function(req, res, next) {
     const MongoClient = require('mongodb').MongoClient;
     const assert = require('assert');
-    res.render('brands/view-brands',{ title: "test"});
+    res.render('brands/view-brands',{ title: "Add new Country"});
+});
+
+//country or province ops
+router.get('/country', function(req, res, next) {
+    res.render('location/country',{ title: "test"});
 });
 
 router.get('/brands/new/:id', function(req, res, next) {

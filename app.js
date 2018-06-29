@@ -31,7 +31,7 @@ app.get('/', function(req, res) {
 });
 
 //define all mount here
-app.use('/configuration', configRouter);
+app.use('/config', configRouter);
 app.use('/user', userRouter);
 
 /*app.use(function(req, res, next) {

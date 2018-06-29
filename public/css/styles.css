@@ -82,3 +82,18 @@
 #navcol-1 ul {
   height: 40px;
 }
+
+
+.content-wraper {
+  padding:5px;
+}
+
+.countrylist {
+  padding:5px;
+}
+
+.form-control.field-country {
+}
+
+.form-control.field-province {
+}

@@ -1,0 +1,22 @@
+<section>
+{{>page/nav}}
+<div class="content-wraper">
+    <div class="card">
+        <div class="card-header">
+            <h5 class="mb-0">Add a new Country and Province</h5>
+        </div>
+        <div class="card-body">
+            <div class="form form-wrapper">
+                <form method="post" target="_self" enctype="application/x-www-form-urlencoded" class="form country-form">
+                    <label><strong>Country</strong></label>
+                    <input class="form-control field-country" type="text" name="Country" required="" maxlength="80" minlength="40">
+                    <label><strong>Province / State</strong></label>
+                    <input class="form-control field-province" type="text" name="field-provice" required="">
+                </form>
+                <div class="countrylist"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
