@@ -24,6 +24,12 @@ router.get('/store/add', function(req, res, next) {
     res.render('location/newstore',{ title: "new Store"});
 });
 
+//new asset type ops
+router.get('/assettype/add', function(req, res, next) {
+    res.render('asset/assettype',{ title: "New Asset Type"});
+});
+
+
 router.get('/brands/new/:id', function(req, res, next) {
     res.render('brands/view-brand-new', { title : "new brand form"});
 });
