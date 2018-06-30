@@ -15,8 +15,13 @@ router.get('/brands', function(req, res, next) {
 });
 
 //country or province ops
-router.get('/country', function(req, res, next) {
-    res.render('location/country',{ title: "test"});
+router.get('/country/add', function(req, res, next) {
+    res.render('location/country',{ title: "New Location"});
+});
+
+//new Store  ops
+router.get('/store/add', function(req, res, next) {
+    res.render('location/newstore',{ title: "new Store"});
 });
 
 router.get('/brands/new/:id', function(req, res, next) {
