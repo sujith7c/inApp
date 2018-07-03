@@ -1,4 +1,6 @@
-//Sample app for the Nodejs
+/*
+*App main file
+*/
 
 var express = require("express");
 var hbs = require("express-handlebars");
