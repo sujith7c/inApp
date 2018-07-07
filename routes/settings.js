@@ -1,6 +1,7 @@
  
 var express = require('express');
 var router = express.Router();
+var common = require('../libs/common.js');
 
 //configuration  settings routes
 
@@ -25,9 +26,15 @@ router.get('/store/add', function(req, res, next) {
 });
 
 //new asset type ops
-router.get('/assettype/add', function(req, res, next) {
-    res.render('asset/assettype',{ title: "New Asset Type"});
+/*router.get('/assettype/add', getBreadCrumb(req, res, next) => {
+    res.render('asset/assettype',{ title: "New Asset Type"}));
 });
+*/
+router.get('/assettype/add', common.getBreadCrumb, (req , res, next) => {
+    res.render('asset/assettype',{ title: "New Asset Type"});
+    
+});
+
 
 
 router.get('/brands/new/:id', function(req, res, next) {

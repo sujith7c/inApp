@@ -1,32 +1,36 @@
 <section>
-{{>page/nav}}
-<div class="content-wraper">
-    <div class="card">
-        <div class="card-header">
-            <h5 class="mb-0">New asset type</h5>
-        </div>
-        <div class="card-body">
-            <div class="form form-wrapper">
-                <form method="post" target="_self" enctype="application/x-www-form-urlencoded" class="form country-form">
-                    <label class="lbl-ast-gname"><strong>Asset Generic name</strong></label>
-                    <input class="form-control field-ast-gname" type="text">
-                    <label class="lbl-pdt-info"><strong>Product info</strong></label>
-                    <input class="form-control field-pdt-info" type="text">
-                    <label class="lbl-ast-brand"><strong>Brand</strong></label>
-                    <input class="form-control field-ast-brand" type="text">
-                    <label class="lbl-ast-mname"><strong>Model Name</strong></label>
-                    <input class="form-control field-ast-name" type="text">
-                    <div class="btn-wrap col-xs-3">
-                        <button class="btn btn-primary btn-save btn-primary-spacing" type="submit"><strong>Save</strong></button>
+    {{>page/nav}}
+    {{>breadcrumb}}
+    <div class="container">
+        <div class="content-wraper">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">New asset type</h5>
+                </div>
+                <div class="card-body">
+                    <div class="form form-wrapper">
+                        <form method="post" target="_self" enctype="application/x-www-form-urlencoded" class="form country-form">
+                            <label class="lbl-ast-gname"><strong>Asset Generic name</strong></label>
+                            <input class="form-control field-ast-gname" type="text">
+                            <label class="lbl-pdt-info"><strong>Product info</strong></label>
+                            <input class="form-control field-pdt-info" type="text">
+                            <label class="lbl-ast-brand"><strong>Brand</strong></label>
+                            <input class="form-control field-ast-brand" type="text">
+                            <label class="lbl-ast-mname"><strong>Model Name</strong></label>
+                            <input class="form-control field-ast-name" type="text">
+                            <div class="btn-wrap col-xs-3">
+                                <button class="btn btn-primary btn-save btn-primary-spacing" type="submit"><strong>Save</strong></button>
+                            </div>
+                        </form>
                     </div>
-                </form>
-            </div>
-            <div class="ast-list">
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title">Asset List</h4>
-                        <h6 class="text-muted card-subtitle mb-2">Subtitle</h6>
-                        <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
+                    <div class="ast-list">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Asset List</h4>
+                                <h6 class="text-muted card-subtitle mb-2">Subtitle</h6>
+                                <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

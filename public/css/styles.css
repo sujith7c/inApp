@@ -83,6 +83,9 @@
   height: 40px;
 }
 
+.nav-breadcrub {
+  padding:5px;
+}
 
 .content-wraper {
   padding:5px;
@@ -131,7 +134,9 @@
 }
 /*End of css for the new store form*/
 .btn-wrap {
+  padding-bottom:5px;
   padding-top:5px;
+
 }
 
 .ast-list {
