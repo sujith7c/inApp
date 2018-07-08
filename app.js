@@ -8,11 +8,15 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var createError = require('http-errors');
+//Included the helmet middleware
+var helmet = require('helmet');
 
 var configRouter = require('./routes/settings');
 var userRouter = require('./routes/user.js');
 
 var app = express();
+app.use(helmet())
+
 //handlebars.create({'defaultLayout': "main"});
 app.set('port',process.env.PORT || 3000);
 app.engine('handlebars',hbs(
