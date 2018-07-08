@@ -25,17 +25,16 @@ router.get('/store/add', function(req, res, next) {
     res.render('location/newstore',{ title: "new Store"});
 });
 
-//new asset type ops
-/*router.get('/assettype/add', getBreadCrumb(req, res, next) => {
-    res.render('asset/assettype',{ title: "New Asset Type"}));
-});
-*/
 router.get('/assettype/add', common.getBreadCrumb, (req , res, next) => {
     res.render('asset/assettype',{ title: "New Asset Type"});
     
 });
-
-
+/**
+ * Asset Type list page 
+ */
+router.get('/assettype', common.getBreadCrumb, (req , res, next) => {
+    res.render('asset/assetlist',{ title: "Asset List"});
+});
 
 router.get('/brands/new/:id', function(req, res, next) {
     res.render('brands/view-brand-new', { title : "new brand form"});
