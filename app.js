@@ -11,7 +11,7 @@ var createError = require('http-errors');
 //Included the helmet middleware
 var helmet = require('helmet');
 
-var configRouter = require('./routes/settings');
+var configRouter = require('./routes/route_settings');
 var userRouter = require('./routes/user.js');
 
 var app = express();
