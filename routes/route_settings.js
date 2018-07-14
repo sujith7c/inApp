@@ -2,11 +2,13 @@
 var express = require('express');
 var router = express.Router();
 var common = require('../libs/common.js');
+var appSettings = require('../controllers/settingsController');
 
 //configuration  settings routes
-
 router.get('/', function(req, res, next ){
-    res.render('view-config', { title: "Config Page" });
+    res.render('view-config', 
+        { title: "Config Page",entityList : appSettings.getEntityItems()}
+    );
 });
 
 router.get('/brands', function(req, res, next) {
