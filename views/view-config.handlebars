@@ -6,6 +6,9 @@ handlebard template for the config page
     {{>page/nav}}
     {{>breadcrumb}}
     <div class="container" id="conf-page">
+        {{#forloop 2 }}
+            <p>test</p>
+        {{/forloop}}
         {{#each entityList.items}}
             <div class="row">
                 <div class="col-sm">

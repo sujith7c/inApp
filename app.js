@@ -15,13 +15,21 @@ var configRouter = require('./routes/route_settings');
 var userRouter = require('./routes/user.js');
 
 var app = express();
-app.use(helmet())
+app.use(helmet());
 
 //handlebars.create({'defaultLayout': "main"});
 app.set('port',process.env.PORT || 3000);
 app.engine('handlebars',hbs(
 	{
 		defaultLayout:'layout',
+		helpers: {
+			forloop : function(n, block) {
+				var accum = '';
+				for(var i = 0; i < n; ++i)
+					accum += block.fn(i);
+				return accum;				
+			}
+		}
 	}
 ));
 app.set('views', path.join(__dirname, 'views'));
@@ -70,9 +78,27 @@ app.use(function(err, req, res, next) {
 	res.render('view-404');
   });
   
-
 /*app.listen(app.get('port'),function() {
 	console.log('Listening on port '+ app.get('port') + " Press Ctrl + C to terminate");
+});
+*/
+hbs.create({
+	helpers: {
+		times : function(n, block) {
+			var accum = '';
+			for(var i = 0; i < n; ++i)
+				accum += block.fn(i);
+			return accum;
+		}
+	}
+});
+
+/*
+hbs.create('times', function(n, block) {
+    var accum = '';
+    for(var i = 0; i < n; ++i)
+        accum += block.fn(i);
+    return accum;
 });
 */
 module.exports = app;
