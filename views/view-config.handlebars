@@ -6,27 +6,23 @@ handlebard template for the config page
     {{>page/nav}}
     {{>breadcrumb}}
     <div class="container" id="conf-page">
-        {{#forloop entityList.rowCount }}
+        {{#each entityList.items}}
             <div class="row">
-                {{#forloop ../entityList.columnCount}}
-                    {{#each ../../entityList.items}}
-                        <div class="row">
-                            <div class="col-sm">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h5 class="mb-0">{{this}}</h5>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="ast-list">
-                                            <p>{{this}}</p>
-                                        </div>
-                                    </div>
-                                </div>               
-                            </div>          
-                        </div>
-                    {{/each}}                                    
-                {{/forloop}}
+                {{#each this}}
+                    <div class="col-sm">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="mb-0">{{this}}</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="ast-list">
+                                    <p>{{this}}</p>
+                                </div>
+                            </div>
+                        </div>               
+                    </div> 
+                {{/each}}                
             </div>
-        {{/forloop}}
+        {{/each}}
     </div>
 </section>
