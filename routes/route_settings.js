@@ -7,7 +7,11 @@ var appSettings = require('../controllers/settingsController');
 //configuration  settings routes
 router.get('/', function(req, res, next ){
     res.render('view-config', 
-        { title: "Config Page",entityList : appSettings.getEntityItems()}
+        { 
+            title: "Config Page",
+            entityList : appSettings.getEntityItems(),
+            breadCrumb : common.getBreadCrumb(req, res),
+        }
     );
 });
 

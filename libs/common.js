@@ -2,21 +2,18 @@
  * common lib helper functions
  *
  */
-
+var url = require('url');
  var common = {};
 
  common.getBreadCrumb = function(req, res, next) {
-     const urls = req.originalUrl.split('/');
-     urls.shift();      
-     req.breadcrumbs = urls.map((url, i) => {
-         return {
-             breadcrumbName : (url == '' ? 'Home' : url.charAt(0).toUpperCase() +  url.slice(1)),
-             breadcrumbUrl: (urls.slice(0, i + 1).join('/')),
-         };
-     });
-     console.log(req.breadcrumbs);
-     console.log(urls);
-     next();
+     //create Base Url
+     var baseUrl = url.format(
+            {
+                protocol : req.protocol,
+                host :  req.get('host'),
+            }
+     );
+     urlParts = url.parse(req.url).pathname.split('/');
+     console.log(urlParts);
  }
-
 module.exports = common;
