@@ -6,6 +6,7 @@ var appSettings = require('../controllers/settingsController');
 
 //configuration  settings routes
 router.get('/', function(req, res, next ){
+    console.log(req.protocol),
     res.render('view-config', 
         { 
             title: "Config Page",

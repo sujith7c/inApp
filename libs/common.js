@@ -14,6 +14,6 @@ var url = require('url');
             }
      );
      urlParts = url.parse(req.url).pathname.split('/');
-     console.log(urlParts);
+     //console.log(req);
  }
 module.exports = common;
