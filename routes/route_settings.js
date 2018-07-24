@@ -4,8 +4,9 @@ var router = express.Router();
 var common = require('../libs/common.js');
 var appSettings = require('../controllers/settingsController');
 
+
 //configuration  settings routes
-router.get('/', function(req, res, next ){
+router.get('/config',function(req, res, next ){
     console.log(req.protocol),
     res.render('view-config', 
         { 
@@ -16,10 +17,15 @@ router.get('/', function(req, res, next ){
     );
 });
 
-router.get('/brands', function(req, res, next) {
+router.get('/config/brands', function(req, res, next) {
     const MongoClient = require('mongodb').MongoClient;
     const assert = require('assert');
-    res.render('brands/view-brands',{ title: "Add new Country"});
+    res.render('brands/view-brands',
+        { 
+            title: "Add new Country",
+            breadCrumb : common.getBreadCrumb(req, res),
+        }
+    );
 });
 
 //country or province ops

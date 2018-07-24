@@ -13,7 +13,7 @@ var url = require('url');
                 host :  req.get('host'),
             }
      );
-     urlParts = url.parse(req.url).pathname.split('/');
-     //console.log(req);
+     urlParts = url.parse(req.url, true).pathname.split('/');
+     console.log(urlParts);
  }
 module.exports = common;

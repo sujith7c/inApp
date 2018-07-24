@@ -37,9 +37,12 @@ app.get('/', function(req, res) {
 	res.render('index', {title:"InApp:Home"});
 });
 
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
+
 //define all mount here
-app.use('/config', configRouter);
-app.use('/user', userRouter);
+app.use('/', configRouter);
+app.use('/', userRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
