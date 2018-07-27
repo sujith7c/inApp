@@ -1,8 +1,10 @@
 {{!Breadcrub menus dynamically fetched from the url}}
 <div class="nav-breadcrub">
     <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a><span>Home</span></a></li>
-        <li class="breadcrumb-item"><a><span>Library</span></a></li>
-        <li class="breadcrumb-item"><a><span>Data</span></a></li>
+        {{#each breadCrumb}}
+            <li class="breadcrumb-item">
+                <a href="{{this.url}}"><span>{{this.label}}</span></a>
+            </li>
+        {{/each}}
     </ol>
 </div>

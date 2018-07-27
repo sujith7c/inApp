@@ -29,16 +29,20 @@ router.get('/config/brands', function(req, res, next) {
 });
 
 //country or province ops
-router.get('/country/add', function(req, res, next) {
+router.get('/config/country/add', function(req, res, next) {
     res.render('location/country',{ title: "New Location"});
 });
 
 //new Store  ops
-router.get('/store/add', function(req, res, next) {
-    res.render('location/newstore',{ title: "new Store"});
+router.get('/config/store/add', function(req, res, next) {
+    res.render('location/newstore',
+    { 
+        title: "New Store",
+        breadCrumb : common.getBreadCrumb(req, res),
+    });
 });
 
-router.get('/assettype/add', common.getBreadCrumb, (req , res, next) => {
+router.get('/config/assettype/add', common.getBreadCrumb, (req , res, next) => {
     res.render('asset/assettype',{ title: "New Asset Type"});
     
 });
