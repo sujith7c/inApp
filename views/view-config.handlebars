@@ -6,17 +6,18 @@ handlebard template for the config page
     {{>page/nav}}
     {{>breadcrumb}}
     <div class="container" id="conf-page">
-        {{#each entityList.items}}
+        {{#each entityList.ele}}
             <div class="row">
                 {{#each this}}
                     <div class="col-sm">
                         <div class="card">
                             <div class="card-header">
-                                <h5 class="mb-0">{{this}}</h5>
+                                <h5 class="mb-0">{{this.label}}</h5>
                             </div>
                             <div class="card-body">
                                 <div class="ast-list">
-                                    <p>{{this}}</p>
+                                    <a href='{{this.url}}'>{{this.label}}</a>
+                                    <p>{{this.desc}}</p>
                                 </div>
                             </div>
                         </div>               
