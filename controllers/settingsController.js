@@ -51,13 +51,13 @@ appSettings.createConfigObj = function() {
     var conf = new Object;
     conf.section = [
         {label  : 'Companay', url : '/config/company', desc : 'Add a company'},
-        {label : 'Asset Type', url: 'config/assettype', desc : 'Add new asset type'},
+        {label : 'Asset Type', url: '/config/assettype/add', desc : 'Add new asset type'},
         {label : 'Location', url: 'config/location', desc : 'Add new Location'},
-        {label : 'Store', url: 'config/store', desc : 'Add new Store'},
-        {label : 'Brand', url: 'config/brand', desc : 'Add new Brand'},
+        {label : 'Store', url: '/config/store/add', desc : 'Add new Store'},
+        {label : 'Brand', url: '/config/brands', desc : 'Add new Brand'},
         {label : 'User', url: 'config/user', desc : 'Add new User'},
         {label : 'Misc', url: 'config/misc', desc : 'Add new Misc'},
-        {label : 'Locale', url: 'config/locale', desc : 'Add new Locle'},                  
+        {label : 'Locale', url: '/config/country/add', desc : 'Add new Locle'},                  
     ];
     conf.col = 2;
     conf.row = this.getNumberOfRows(conf.section, conf.col);

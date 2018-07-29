@@ -49,7 +49,7 @@ router.get('/config/assettype/add', common.getBreadCrumb, (req , res, next) => {
 /**
  * Asset Type list page 
  */
-router.get('/assettype', common.getBreadCrumb, (req , res, next) => {
+router.get('/config/assettype', common.getBreadCrumb, (req , res, next) => {
     res.render('asset/assetlist',{ title: "Asset List"});
 });
 
