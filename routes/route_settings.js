@@ -42,15 +42,23 @@ router.get('/config/store/add', function(req, res, next) {
     });
 });
 
-router.get('/config/assettype/add', common.getBreadCrumb, (req , res, next) => {
-    res.render('asset/assettype',{ title: "New Asset Type"});
+router.get('/config/assettype/add', function(req , res, next) {
+    res.render('asset/assettype',
+    { 
+        title: "New Asset Type",
+        breadCrumb : common.getBreadCrumb(req, res),
+    });
     
 });
 /**
  * Asset Type list page 
  */
-router.get('/config/assettype', common.getBreadCrumb, (req , res, next) => {
-    res.render('asset/assetlist',{ title: "Asset List"});
+router.get('/config/assettype', function(req , res, next){
+    res.render('asset/assetlist',
+    { 
+        title: "Asset List",
+        breadCrumb : common.getBreadCrumb(req, res),        
+    });
 });
 
 router.get('/brands/new/:id', function(req, res, next) {
