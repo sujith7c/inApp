@@ -30,7 +30,10 @@ router.get('/config/brands', function(req, res, next) {
 
 //country or province ops
 router.get('/config/country/add', function(req, res, next) {
-    res.render('location/country',{ title: "New Location"});
+    res.render('location/country',{ 
+        breadCrumb : common.getBreadCrumb(req, res),
+        title: "New Location",
+    });
 });
 
 //new Store  ops

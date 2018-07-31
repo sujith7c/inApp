@@ -52,7 +52,7 @@ appSettings.createConfigObj = function() {
     conf.section = [
         {label  : 'Companay', url : '/config/company/add', desc : 'Add a company'},
         {label : 'Asset Type', url: '/config/assettype/add', desc : 'Add new asset type'},
-        {label : 'Location', url: 'config/location', desc : 'Add new Location'},
+        {label : 'Location', url: '/config/country/add', desc : 'Add new Location'},
         {label : 'Store', url: '/config/store/add', desc : 'Add new Store'},
         {label : 'Brand', url: '/config/brands', desc : 'Add new Brand'},
         {label : 'User', url: 'config/user', desc : 'Add new User'},
