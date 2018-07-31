@@ -50,7 +50,7 @@ appSettings.getNumberOfRows  = function(confArr, noColumn) {
 appSettings.createConfigObj = function() {
     var conf = new Object;
     conf.section = [
-        {label  : 'Companay', url : '/config/company', desc : 'Add a company'},
+        {label  : 'Companay', url : '/config/company/add', desc : 'Add a company'},
         {label : 'Asset Type', url: '/config/assettype/add', desc : 'Add new asset type'},
         {label : 'Location', url: 'config/location', desc : 'Add new Location'},
         {label : 'Store', url: '/config/store/add', desc : 'Add new Store'},

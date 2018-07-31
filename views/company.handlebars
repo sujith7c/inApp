@@ -1,0 +1,30 @@
+<section>
+{{>page/nav}}
+{{>breadcrumb}}
+{{!Company details form
+TODO: move style to sytlesheets 
+}}
+<div class="content-wraper">
+    <div class="card">
+        <div class="card-header">
+            <h5 class="mb-0">Add Company Details</h5>
+        </div>
+        <div class="card-body">
+            <div class="form form-wrapper">
+                <form method="post" target="_self" enctype="application/x-www-form-urlencoded" class="form company-form">
+                    <label><strong>Company</strong></label>
+                    <input class="form-control field-company" type="text" name="Country" required="" maxlength="80" minlength="40">
+                    <label><strong>Province / State</strong></label>
+                    <input class="form-control field-province" type="text" name="field-provice" required="">
+                    <label><strong>Land Mark</strong><br></label>
+                    <input class="form-control field-landmark" type="text" name="field-provice" required="">
+                    <div class="button-wrap">
+                        <button class="btn btn-primary" type="button" id="btn-comp">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+

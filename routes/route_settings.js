@@ -65,4 +65,15 @@ router.get('/brands/new/:id', function(req, res, next) {
     res.render('brands/view-brand-new', { title : "new brand form"});
 });
 
+//Add Company detail form router
+router.get('/config/company/add', function(req , res, next) {
+    res.render('company',
+    { 
+        title: "New Company",
+        breadCrumb : common.getBreadCrumb(req, res),
+    });
+    
+});
+
+
 module.exports = router;
